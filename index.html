@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <link rel="stylesheet"href="CSS/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体重计算器</title>
+</head>
+<body background="https://cn.bing.com/th?id=OHR.HecetaHead_ZH-CN2813876594_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp"
+style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+    <h1 align="center">体重计算器</h1>
+    <p>我知道你的体重，你信吗？ <img src="pictures/doge.gif"></p>
+    <input id="name" placeholder="请输入您的体重 单位：千克">
+    <br>
+    <input  id="button" type="button" value="确定" >  
+    <script>  
+        var btn = document.getElementById("button");  
+        btn.onclick =function(){  
+            var name = document.getElementById("name").value;
+            if(name!=""){
+                if(parseFloat(name)){
+                    alert("计算成功！您的体重是："+name+"kg");
+                }else{
+                    alert("震惊！您的体重居然不是数字！！！")
+                }
+            }else{
+                alert("震惊！您居然没有体重！！！")
+            }
+        }
+    </script>
+</body>
+</html>
